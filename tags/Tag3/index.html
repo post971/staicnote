@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="第四章 实战入门本章节将介绍如何在kubernetes集群中部署一个nginx服务，并且能够对其进行访问。 Namespace​    Namespace是kubernetes系统中的一种非常重要资源，它的主要作用是用来实现多套环境的资源隔离或者多租户的资源隔离。 ​    默认情况下，kubernetes集群中的所有的Pod都是可以相互访问的。但是在实际中，可能不想让两个Pod之间进行互相的访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="kubernetes day1">
 <meta property="og:url" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="第四章 实战入门本章节将介绍如何在kubernetes集群中部署一个nginx服务，并且能够对其进行访问。 Namespace​    Namespace是kubernetes系统中的一种非常重要资源，它的主要作用是用来实现多套环境的资源隔离或者多租户的资源隔离。 ​    默认情况下，kubernetes集群中的所有的Pod都是可以相互访问的。但是在实际中，可能不想让两个Pod之间进行互相的访问">
@@ -16,15 +16,18 @@
 <meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407100850484.png">
 <meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407121501907.png">
 <meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200408193950807.png">
-<meta property="og:image" content="https://post971.github.io/assets/image-20200408194716912.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/assets/image-20200408194716912.png">
 <meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407121501907.png">
 <meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200412111402706.png">
 <meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200406184656917.png">
 <meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200605021831545.png">
-<meta property="og:image" content="https://post971.github.io/assets/image-20200514095913741.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/assets/image-20200514095913741.png">
 <meta property="article:published_time" content="2025-03-05T04:30:58.199Z">
-<meta property="article:modified_time" content="2020-08-11T07:26:44.000Z">
+<meta property="article:modified_time" content="2025-03-05T07:42:18.739Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="读书">
+<meta property="article:tag" content="Tag2">
+<meta property="article:tag" content="Tag3">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407100850484.png">
 
@@ -253,7 +256,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(3)</small>
+                <small>(2)</small>
             
         </div>
     </li>
@@ -262,10 +265,10 @@
             
                 
     <li>
-        <div data-rel="读书">
+        <div data-rel="k8s">
             
-            读书
-            <small>(1)</small>
+            k8s
+            <small>(2)</small>
         </div>
         
     </li>
@@ -293,7 +296,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="3">
+<input type="hidden" id="yelog_site_posts_number" value="2">
 
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -359,25 +362,16 @@
     <nav id="title-list-nav">
         
         
-        <a  class="全部文章 "
+        <a  class="全部文章 k8s "
            href="/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/"
-           data-tag=""
+           data-tag="读书,Tag2,Tag3"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="kubernetes day1">kubernetes day1</span>
             <span class="post-date" title="2025-03-05 12:30:58">2025/03/05</span>
         </a>
         
         
-        <a  class="全部文章 "
-           href="/staicnote/2025/03/04/hello-world/"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="Hello World">Hello World</span>
-            <span class="post-date" title="2025-03-04 23:16:18">2025/03/04</span>
-        </a>
-        
-        
-        <a  class="全部文章 读书 "
+        <a  class="全部文章 k8s "
            href="/staicnote/2025/03/04/day1/Kubernetes%E7%AC%AC1%E5%A4%A9/"
            data-tag="读书,Tag2,Tag3"
            data-author="" >
