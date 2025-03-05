@@ -9,24 +9,24 @@
 <meta name="description" content="第四章 实战入门本章节将介绍如何在kubernetes集群中部署一个nginx服务，并且能够对其进行访问。 Namespace​    Namespace是kubernetes系统中的一种非常重要资源，它的主要作用是用来实现多套环境的资源隔离或者多租户的资源隔离。 ​    默认情况下，kubernetes集群中的所有的Pod都是可以相互访问的。但是在实际中，可能不想让两个Pod之间进行互相的访问">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/index.html">
+<meta property="og:url" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="第四章 实战入门本章节将介绍如何在kubernetes集群中部署一个nginx服务，并且能够对其进行访问。 Namespace​    Namespace是kubernetes系统中的一种非常重要资源，它的主要作用是用来实现多套环境的资源隔离或者多租户的资源隔离。 ​    默认情况下，kubernetes集群中的所有的Pod都是可以相互访问的。但是在实际中，可能不想让两个Pod之间进行互相的访问">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407100850484.png">
-<meta property="og:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407121501907.png">
-<meta property="og:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200408193950807.png">
-<meta property="og:image" content="https://github.com/assets/image-20200408194716912.png">
-<meta property="og:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407121501907.png">
-<meta property="og:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200412111402706.png">
-<meta property="og:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200406184656917.png">
-<meta property="og:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200605021831545.png">
-<meta property="og:image" content="https://github.com/assets/image-20200514095913741.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407100850484.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407121501907.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200408193950807.png">
+<meta property="og:image" content="https://post971.github.io/assets/image-20200408194716912.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407121501907.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200412111402706.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200406184656917.png">
+<meta property="og:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200605021831545.png">
+<meta property="og:image" content="https://post971.github.io/assets/image-20200514095913741.png">
 <meta property="article:published_time" content="2025-03-05T04:30:58.199Z">
 <meta property="article:modified_time" content="2020-08-11T07:26:44.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407100850484.png">
+<meta name="twitter:image" content="https://post971.github.io/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/assets/image-20200407100850484.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -360,7 +360,7 @@
         
         
         <a  class="全部文章 "
-           href="/post971/staicnote/tree/main/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/"
+           href="/staicnote/2025/03/05/day2/Kubernetes%E7%AC%AC2%E5%A4%A9/"
            data-tag=""
            data-author="" >
             <span class="post-title" title=""></span>
@@ -369,7 +369,7 @@
         
         
         <a  class="全部文章 "
-           href="/post971/staicnote/tree/main/2025/03/04/hello-world/"
+           href="/staicnote/2025/03/04/hello-world/"
            data-tag=""
            data-author="" >
             <span class="post-title" title="Hello World">Hello World</span>
@@ -378,7 +378,7 @@
         
         
         <a  class="全部文章 读书 "
-           href="/post971/staicnote/tree/main/2025/03/04/day1/Kubernetes%E7%AC%AC1%E5%A4%A9/"
+           href="/staicnote/2025/03/04/day1/Kubernetes%E7%AC%AC1%E5%A4%A9/"
            data-tag="读书,Tag2,Tag3"
            data-author="" >
             <span class="post-title" title="kubernetes day1">kubernetes day1</span>
@@ -434,7 +434,7 @@
 <h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阁主的个人站。</p>
 <p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
 <p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
-<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
+<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> 生成，部署在 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>主题 <a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
 <p><code>3-hexo</code> 主题使用交流可以加 Q群: <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e8cf083cc097141eaf323396f1766809b8e90ff00c67bb441898f672892f6904"><img data-ignore border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="3-hexo使用交流" title="3-hexo使用交流"></a></p>
 <p>主要功能：</p>
 <ul>
